@@ -1,1 +1,5 @@
-# threds_iot
+Olá, meu nome é  Carlos Morciani.
+Irei explicar o funcionamento dos progrmas.
+Na ESP1, é feita a leitura da temperatura e da umidade, quando a temperatura dos sensores for maior ou igual a 60 graus Celcius os servos se movem(servo 1 para 50 graus e o servo 2 para 180 graus), quando o Switch é desligado os servos vão para a posição 0.
+Quando a umidade estiver abaixo de 20% é enviado uma mensagem para a ESP2 que ativa os alarmes e envia uma mensagem para a ESP1 que a umidade esta muito baixa. A respeito dos alarmes da ESP2,  eles não estão detectando quando a umidade normaliza, dessa forma os alarmes não desligam e por sua vez o Switch que deveria desliga-los para de funcionar. Contudo, quando os alarmes não estão ligados ele funciona, ou seja caso esteja desligado os alarmes não ligam mesmo que a umidade esteja abaixo 20%.
+Na ESP1, quando o Switch estiver desligado não é enviado mensagens para a ESP2 e os servos se movem para a posição 0, mas os dados da temperatura e umidade continuam aparecendo no console.
